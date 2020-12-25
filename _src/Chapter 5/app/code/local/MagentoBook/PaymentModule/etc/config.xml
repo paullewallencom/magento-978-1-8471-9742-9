@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MagentoBook_PaymentModule>
+            <version>0.1.0</version>
+        </MagentoBook_PaymentModule>
+    </modules>
+    <global>
+        <models>
+            <paymentmodule>
+                <class>MagentoBook_PaymentModule_Model</class>
+            </paymentmodule>
+        </models>
+        <resources>
+            <paymentmodule_setup>
+                <setup>
+                    <module>MagentoBook_PaymentModule</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </paymentmodule_setup>
+            <paymentmodule_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </paymentmodule_write>
+            <paymentmodule_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </paymentmodule_read>
+        </resources>
+    </global>
+    <default>
+        <payment>
+            <paymentmodule>
+                <active>0</active>
+                <model>paymentmodule/paymentMethod</model>
+                <order_status>1</order_status>
+                <title>Credit Card (Magento Book Payment Module)</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+            </paymentmodule>
+        </payment>
+    </default>
+</config>

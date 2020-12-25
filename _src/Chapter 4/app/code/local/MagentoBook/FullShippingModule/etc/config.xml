@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MagentoBook_FullShippingModule>
+            <version>0.1.0</version>
+            <depends>
+                <Mage_Shipping/>
+            </depends>
+        </MagentoBook_FullShippingModule>
+    </modules>
+    <global>
+        <models>
+            <FullShippingModule>
+                <class>MagentoBook_FullShippingModule_Model</class>
+            </FullShippingModule>
+        </models>
+        <resources>
+            <fullshippingmodule_setup>
+                <setup>
+                    <module>MagentoBook_FullShippingModule</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </fullshippingmodule_setup>
+        </resources>
+    </global>
+</config>

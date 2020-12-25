@@ -1,0 +1,15 @@
+<?php
+
+$brands = $this->getBrands();
+if ( count($brands) > 0 )
+{
+	foreach ( $brands as $brand ){ 
+		echo '<h3>Name: '.$brand['brand_name'].'</h3>';
+		echo '<p><strong>Location: '.$brand['brand_location'].'</strong></p>';
+		echo '<p>Desciption: '.$brand['brand_description'].'</p><hr />';
+	}
+}
+else
+{
+	print 'We don\'t have any brands here right now. Please try again later.';
+}

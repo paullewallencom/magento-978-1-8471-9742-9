@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MagentoBook_ShippingModule>
+            <active>true</active>
+            <codePool>local</codePool>
+        </MagentoBook_ShippingModule>
+    </modules>
+</config>
